@@ -1,0 +1,24 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # DATABASE_URL should be provided via environment or .env file in production
+      - DATABASE_URL=${DATABASE_URL}
+      - CORS_ORIGIN=${CORS_ORIGIN:-http://localhost:3001}
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:3000}

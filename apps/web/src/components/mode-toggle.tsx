@@ -13,7 +13,6 @@ import {
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
-  if (typeof window === "undefined") return null;
 
   return (
     <DropdownMenu>

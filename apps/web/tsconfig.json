@@ -16,6 +16,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -27,21 +28,24 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "baseUrl": ".",
+    "types": [
+      "node"
+    ]
   },
-  "include": [
-    "./**/*.ts",
-    "./**/*.tsx",
-    "./.next/types/**/*.ts",
-    "./next-env.d.ts",
-    ".next/types/**/*.ts"
-  ],
   "exclude": [
-    "./node_modules"
+    "../server/*" // Exclude everything outside the web directory
   ],
   "references": [
     {
       "path": "../server"
     }
+  ],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }
