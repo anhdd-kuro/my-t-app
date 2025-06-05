@@ -35,17 +35,13 @@
     ]
   },
   "exclude": [
-    "../server/*" // Exclude everything outside the web directory
-  ],
-  "references": [
-    {
-      "path": "../server"
-    }
+    "../server/**/*",
+    "../server/prisma/**/*"
   ],
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "./**/*.ts",
+    "./**/*.tsx"
   ]
 }

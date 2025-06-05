@@ -17,20 +17,22 @@
     "schema": "./schema"
   },
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "zod": "^3.25.16",
-    "@trpc/server": "^11.0.0",
-    "@trpc/client": "^11.0.0",
-    "@hono/trpc-server": "^0.3.4",
-    "hono": "^4.7.6",
+    "@aws-sdk/client-secrets-manager": "^3.823.0",
+    "@aws-sdk/credential-providers": "^3.823.0",
     "@hono/node-server": "^1.14.0",
-    "@prisma/client": "6.8.2"
+    "@hono/trpc-server": "^0.3.4",
+    "@prisma/client": "6.8.2",
+    "@trpc/client": "^11.0.0",
+    "@trpc/server": "^11.0.0",
+    "dotenv": "^16.4.7",
+    "hono": "^4.7.6",
+    "zod": "^3.25.16"
   },
   "devDependencies": {
-    "tsc-alias": "^1.8.11",
-    "typescript": "^5.8.2",
-    "tsx": "^4.19.2",
     "@types/node": "^22.13.11",
-    "prisma": "6.8.2"
+    "prisma": "6.8.2",
+    "tsc-alias": "^1.8.11",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.2"
   }
 }

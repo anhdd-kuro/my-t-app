@@ -9,7 +9,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY . .
 RUN \
-  if [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile && pnpm turbo -F web build; \
+  if [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile && pnpm turbo -F server db:generate && pnpm turbo -F web build; \
   else echo "Lockfile not found." && exit 1; \
   fi
 
